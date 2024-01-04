@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.media.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="830.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.car.OurCarController">
+    <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0">
+            <children>
+                <Pane prefHeight="600.0" prefWidth="800.0">
+                    <children>
+                        <Text layoutX="352.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Our Cars">
+                            <font>
+                                <Font size="25.0" />
+                            </font>
+                        </Text>
+                        <TextField layoutX="216.0" layoutY="46.0" prefHeight="31.0" prefWidth="253.0" promptText="Search">
+                            <font>
+                                <Font size="18.0" />
+                            </font></TextField>
+                        <Button layoutX="463.0" layoutY="46.0" mnemonicParsing="false" text="Search">
+                            <font>
+                                <Font size="18.0" />
+                            </font></Button>
+                        <Hyperlink layoutX="14.0" layoutY="14.0" onAction="#goToCreate" text="&lt;&lt;Back" />
+                        <TableView fx:id="tbView" layoutY="110.0" prefHeight="436.0" prefWidth="830.0">
+                            <columns>
+                                <TableColumn fx:id="tcIDCar" prefWidth="51.0" text="IDCar" />
+                                <TableColumn fx:id="tcNameCar" prefWidth="148.0" text="Name Car" />
+                                <TableColumn fx:id="tcStatus" prefWidth="77.0" text="Status" />
+                                <TableColumn fx:id="tcColor" prefWidth="77.0" text="Color" />
+                                <TableColumn fx:id="tcSeats" prefWidth="106.0" text="Seats" />
+                                <TableColumn fx:id="tcPosition" minWidth="0.0" prefWidth="141.0" text="Position" />
+                                <TableColumn fx:id="tcPrice" prefWidth="88.0" text="Price" />
+                                <TableColumn fx:id="tcEdit" prefWidth="73.0" text="Action" />
+                                <TableColumn fx:id="tcDelete" prefWidth="68.0" text="Action" />
+                            </columns>
+                        </TableView>
+                        <Button layoutX="560.0" layoutY="46.0" mnemonicParsing="false" onAction="#goToEditCar" text="+">
+                            <font>
+                                <Font size="18.0" />
+                            </font>
+                        </Button>
+                    </children>
+                </Pane>
+            </children></AnchorPane>
+    </content>
+</ScrollPane>

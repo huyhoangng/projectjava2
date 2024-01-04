@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.car.EditCarController">
+    <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0">
+            <children>
+                <Pane prefHeight="600.0" prefWidth="800.0">
+                    <children>
+                        <Text layoutX="346.0" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Edit Car">
+                            <font>
+                                <Font size="25.0" />
+                            </font>
+                        </Text>
+                        <Hyperlink onAction="#backToListCar" layoutX="14.0" layoutY="14.0" text="&lt;&lt;Back" />
+                        <Label layoutX="284.0" layoutY="43.0" text="Please Enter Infomation">
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                        </Label>
+                        <Button onAction="#submit" layoutX="348.0" layoutY="471.0" mnemonicParsing="false"  text="Submit" textFill="RED">
+                     <font>
+                        <Font size="18.0" />
+                     </font></Button>
+                        <TextField fx:id="ipNameCar" layoutX="444.0" layoutY="99.0" prefHeight="45.0" prefWidth="227.0" promptText="Name Car" />
+                        <TextArea fx:id="ipPosition" layoutX="444.0" layoutY="259.0" prefHeight="148.0" prefWidth="227.0" promptText="Position">
+                     <font>
+                        <Font size="18.0" />
+                     </font></TextArea>
+                        <TextField fx:id="ipSeats" layoutX="75.0" layoutY="179.0" prefHeight="45.0" prefWidth="227.0" promptText="Seats">
+                     <font>
+                        <Font size="18.0" />
+                     </font></TextField>
+                        <TextField fx:id="ipPrice" layoutX="75.0" layoutY="259.0" prefHeight="45.0" prefWidth="227.0" promptText="Price">
+                     <font>
+                        <Font size="18.0" />
+                     </font></TextField>
+                        <TextField fx:id="ipColor" layoutX="444.0" layoutY="179.0" prefHeight="45.0" prefWidth="227.0" promptText="Color">
+                     <font>
+                        <Font size="18.0" />
+                     </font></TextField>
+                  <TextField fx:id="ipStatus" layoutX="75.0" layoutY="99.0" prefHeight="45.0" prefWidth="227.0" promptText="Status">
+                     <font>
+                        <Font size="18.0" />
+                     </font></TextField>
+
+                    </children>
+                </Pane>
+            </children></AnchorPane>
+    </content>
+</ScrollPane>
