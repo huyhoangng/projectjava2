@@ -3,6 +3,7 @@ package controller.car;
 
 import database.Connector;
 
+import entity.OurCar;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -24,7 +25,7 @@ public class AddCarController implements Initializable{
     public TextField ipColor;
     public TextField ipStatus;
 
-
+    public static OurCar addOurCar;
     public void backToList(ActionEvent actionEvent) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("../../javaFx/cars/OurCar.fxml"));
         Main.rootStage.setScene(new Scene(root,830,550));
@@ -74,6 +75,22 @@ public class AddCarController implements Initializable{
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        try{
+            ipName.setText(addOurCar.getNameCar());
+            ipPosition.setText(addOurCar.getPosition());
+            ipSeats.setText(addOurCar.getSeats());
+            ipPrice.setText(String.valueOf(addOurCar.getPrice()));
+            ipColor.setText(addOurCar.getColor());
+            ipStatus.setText(addOurCar.getStatus());
 
+        }catch(Exception e){
+            e.getMessage();
+        }
+
+    }
+
+    public void backToListCar(ActionEvent actionEvent) throws Exception {
+        Parent root = FXMLLoader.load(getClass().getResource("../../javaFx/cars/OurCar.fxml"));
+        Main.rootStage.setScene(new Scene(root,830,600));
     }
 }

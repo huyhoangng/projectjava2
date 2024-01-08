@@ -11,7 +11,7 @@
             <children>
                 <Pane prefHeight="550.0" prefWidth="830.0">
                     <children>
-                        <Text layoutX="348.0" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Done List">
+                        <Text layoutX="333.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Orders List">
                             <font>
                                 <Font size="25.0" />
                             </font>
@@ -38,10 +38,10 @@
                                 <TableColumn fx:id="tcAddress" prefWidth="142.0" text="Address" />
                                 <TableColumn fx:id="tcCar" minWidth="0.0" prefWidth="112.0" text="Car" />
                                 <TableColumn fx:id="tcDays" prefWidth="128.0" text="Days" />
-                                <TableColumn fx:id="tcPrice" prefWidth="160.0" text="Total Price" />
+                                <TableColumn fx:id="tcPrice" prefWidth="188.0" text="Total Price" />
                             </columns>
                         </TableView>
-                        <Hyperlink onAction="#backtoOrders" layoutX="20.0" layoutY="16.0" text="&lt;&lt;Back" />
+                        <Hyperlink layoutX="20.0" layoutY="16.0" text="&lt;&lt;Back" />
                     </children>
                 </Pane>
             </children></AnchorPane>

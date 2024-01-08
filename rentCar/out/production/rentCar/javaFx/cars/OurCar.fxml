@@ -13,20 +13,20 @@
             <children>
                 <Pane prefHeight="600.0" prefWidth="800.0">
                     <children>
-                        <Text layoutX="352.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Our Cars">
+                        <Text layoutX="334.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="OUR CAR">
                             <font>
-                                <Font size="25.0" />
+                                <Font size="30.0" />
                             </font>
                         </Text>
                         <TextField layoutX="216.0" layoutY="46.0" prefHeight="31.0" prefWidth="253.0" promptText="Search">
                             <font>
                                 <Font size="18.0" />
                             </font></TextField>
-                        <Button layoutX="463.0" layoutY="46.0" mnemonicParsing="false" text="Search">
+                        <Button layoutX="463.0" layoutY="46.0" mnemonicParsing="false" style="-fx-background-color: gray;" text="Search" textFill="WHITE">
                             <font>
                                 <Font size="18.0" />
                             </font></Button>
-                        <Hyperlink layoutX="14.0" layoutY="14.0" onAction="#goToCreate" text="&lt;&lt;Back" />
+                        <Hyperlink layoutX="14.0" layoutY="14.0" onAction="#goToCreate" text="&lt;&lt;Back" textOverrun="CENTER_ELLIPSIS" />
                         <TableView fx:id="tbView" layoutY="110.0" prefHeight="436.0" prefWidth="830.0">
                             <columns>
                                 <TableColumn fx:id="tcIDCar" prefWidth="51.0" text="IDCar" />
@@ -40,7 +40,7 @@
                                 <TableColumn fx:id="tcDelete" prefWidth="68.0" text="Action" />
                             </columns>
                         </TableView>
-                        <Button layoutX="560.0" layoutY="46.0" mnemonicParsing="false" onAction="#goToEditCar" text="+">
+                        <Button layoutX="560.0" layoutY="46.0" mnemonicParsing="false" onAction="#addOurCar" style="-fx-background-color: #04AA6D;" text="+" textFill="WHITE">
                             <font>
                                 <Font size="18.0" />
                             </font>

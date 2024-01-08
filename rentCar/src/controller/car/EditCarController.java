@@ -49,7 +49,7 @@ public class EditCarController implements Initializable {
 
     public void backToListCar(ActionEvent actionEvent) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("../../javaFx/cars/OurCar.fxml"));
-        Main.rootStage.setScene(new Scene(root,830,550));
+        Main.rootStage.setScene(new Scene(root,830,600));
     }
 
     public void submit(ActionEvent actionEvent) {

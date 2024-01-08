@@ -38,7 +38,7 @@ public class DeleteCarController implements Initializable {
     }
     public void backToListCar() throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("../../javaFx/cars/OurCar.fxml"));
-        Main.rootStage.setScene(new Scene(root,830,550));
+        Main.rootStage.setScene(new Scene(root,830,600));
     }
     public void handleDelete() {
         try{

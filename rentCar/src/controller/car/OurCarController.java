@@ -72,14 +72,19 @@ public class OurCarController implements Initializable {
         }
         public void goToCreate(ActionEvent actionEvent) throws Exception{
             Parent root = FXMLLoader.load(getClass().getResource("../../javaFx/HomePage.fxml"));
-            Main.rootStage.setScene(new Scene(root,830,550));
+            Main.rootStage.setScene(new Scene(root,830,600));
         }
 
 
     public void goToEditCar(ActionEvent actionEvent) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("../../javaFx/cars/EditCar.fxml"));
-        Main.rootStage.setScene(new Scene(root,830,550));
+        Main.rootStage.setScene(new Scene(root,830,600));
 
+    }
+
+    public void addOurCar(ActionEvent actionEvent) throws Exception {
+        Parent root = FXMLLoader.load(getClass().getResource("../../javaFx/cars/EditCar.fxml"));
+        Main.rootStage.setScene(new Scene(root,830,600));
     }
 }
 
