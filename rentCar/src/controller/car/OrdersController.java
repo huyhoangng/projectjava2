@@ -58,7 +58,7 @@ public class OrdersController implements Initializable {
     }
 
     public void backtoOrders(ActionEvent actionEvent) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("../../javaFx/cars/Orders.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("../../javaFx/orders/Orders.fxml"));
         Main.rootStage.setScene(new Scene(root,830,550));
     }
 }

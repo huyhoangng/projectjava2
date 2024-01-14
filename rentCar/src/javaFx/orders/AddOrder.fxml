@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="830.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
+  <content>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <Pane prefHeight="550.0" prefWidth="830.0" style="-fx-background-color: white;">
+               <children>
+                  <Pane layoutX="82.0" layoutY="81.0" prefHeight="318.0" prefWidth="667.0" style="-fx-background-color: silver; -fx-border-radius: 15px;" />
+                  <Text layoutX="357.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add Order">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Text>
+                  <TextField layoutX="101.0" layoutY="106.0" prefHeight="39.0" prefWidth="252.0" promptText="Full Name" style="-fx-border-radius: 10px;">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+                  <TextField layoutX="101.0" layoutY="174.0" prefHeight="39.0" prefWidth="252.0" promptText="Date of Birth" style="-fx-border-radius: 10px;">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+                  <TextArea layoutX="101.0" layoutY="242.0" prefHeight="122.0" prefWidth="252.0" promptText="Address" style="-fx-border-radius: 10px;">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextArea>
+                  <TextField layoutX="474.0" layoutY="106.0" prefWidth="252.0" promptText="ID Car" style="-fx-border-radius: 10px;">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+                  <TextField layoutX="474.0" layoutY="242.0" prefWidth="252.0" promptText="Days" style="-fx-border-radius: 10px;">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+                  <TextField layoutX="474.0" layoutY="174.0" prefWidth="252.0" promptText="Name Car" style="-fx-border-radius: 10px;">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+                  <Button layoutX="346.0" layoutY="453.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="140.0" style="-fx-background-color: #04aa6d; -fx-border-radius: 15px;" text="Submit" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Hyperlink layoutX="28.0" layoutY="16.0" text="&lt;&lt;Back" />
+               </children>
+            </Pane>
+         </children></AnchorPane>
+  </content>
+</ScrollPane>

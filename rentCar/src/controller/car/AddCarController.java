@@ -18,20 +18,19 @@ import java.sql.PreparedStatement;
 import java.util.ResourceBundle;
 
 public class AddCarController implements Initializable{
-    public TextField ipName;
+    public TextField ipNameCar;
     public TextArea ipPosition;
     public TextField ipSeats;
     public TextField ipPrice;
     public TextField ipColor;
     public TextField ipStatus;
-
     public static OurCar addOurCar;
     public void backToList(ActionEvent actionEvent) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("../../javaFx/cars/OurCar.fxml"));
         Main.rootStage.setScene(new Scene(root,830,550));
     }
     public void submit(ActionEvent actionEvent){
-            String name = ipName.getText();
+            String name = ipNameCar.getText();
             String position = ipPosition.getText();
             String status = ipStatus.getText();
             String seats = ipSeats.getText();
@@ -53,16 +52,13 @@ public class AddCarController implements Initializable{
             }catch (Exception e) {
                 e.getMessage();
             } finally {
-                ipName.setText("");
+                ipNameCar.setText("");
                 ipPosition.setText("");
                 ipStatus.setText("");
                  ipSeats.setText("");
                  ipColor.setText("");
                ipPrice.setText("");
             }
-
-
-
     }
 
     private void showAlert(String message){
@@ -76,7 +72,7 @@ public class AddCarController implements Initializable{
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         try{
-            ipName.setText(addOurCar.getNameCar());
+            ipNameCar.setText(addOurCar.getNameCar());
             ipPosition.setText(addOurCar.getPosition());
             ipSeats.setText(addOurCar.getSeats());
             ipPrice.setText(String.valueOf(addOurCar.getPrice()));
@@ -86,7 +82,6 @@ public class AddCarController implements Initializable{
         }catch(Exception e){
             e.getMessage();
         }
-
     }
 
     public void backToListCar(ActionEvent actionEvent) throws Exception {

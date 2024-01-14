@@ -25,7 +25,7 @@ public class HomeController {
 
 
     public void goToDoneList(ActionEvent actionEvent) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("../javaFx/cars/Orders.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("../javaFx/orders/Orders.fxml"));
 
         Main.rootStage.setScene(new Scene(root, 830,550));
     }

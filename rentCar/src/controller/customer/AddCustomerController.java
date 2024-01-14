@@ -24,7 +24,7 @@ public class AddCustomerController  {
 
         public void backToList(ActionEvent actionEvent) throws IOException {
             Parent root = FXMLLoader.load(getClass().getResource("../../javafx/customer/ListCustomer.fxml"));
-            Main.rootStage.setScene(new Scene(root, 800, 600));
+            Main.rootStage.setScene(new Scene(root, 830, 550));
         }
 
         public void submit(ActionEvent actionEvent) {
