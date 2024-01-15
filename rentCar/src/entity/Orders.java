@@ -6,17 +6,35 @@ public class Orders {
     private String FullName;
     private LocalDate DOB;
     private String Address;
-    private String Car;
+    private Integer IDCar;
+    private String NameCar;
     private Integer Days;
     private Integer Price;
 
-    public Orders(String fullName, LocalDate DOB, String address, String car, Integer days, Integer price) {
+    public Orders(String fullName, LocalDate DOB, String address,Integer idCar, String nameCar, Integer days, Integer price) {
         FullName = fullName;
         this.DOB = DOB;
         Address = address;
-        Car = car;
+        IDCar= idCar;
+        NameCar = nameCar;
         Days = days;
         Price = price;
+    }
+
+    public void setNameCar(String nameCar) {
+        NameCar = nameCar;
+    }
+
+    public String getNameCar() {
+        return NameCar;
+    }
+
+    public Integer getIDCar() {
+        return IDCar;
+    }
+
+    public void setIDCar(Integer IDCar) {
+        this.IDCar = IDCar;
     }
 
     public void setFullName(String fullName) {
@@ -31,9 +49,6 @@ public class Orders {
         Address = address;
     }
 
-    public void setCar(String car) {
-        Car = car;
-    }
 
     public void setDays(Integer days) {
         Days = days;
@@ -55,9 +70,6 @@ public class Orders {
         return Address;
     }
 
-    public String getCar() {
-        return Car;
-    }
 
     public Integer getDays() {
         return Days;

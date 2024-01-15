@@ -30,7 +30,7 @@
                         </Button>
                         <Hyperlink layoutX="93.0" layoutY="111.0" onAction="#goToCar" style="-fx-font-weight: bold;" text="Car List" />
                         <Hyperlink layoutX="246.0" layoutY="111.0" onAction="#goToCostomer" style="-fx-font-weight: bold;" text="Customer Infomation" />
-                        <Hyperlink layoutX="485.0" layoutY="111.0" onAction="#goToDoneList" style="-fx-font-weight: bold;" text="Done List" />
+                        <Hyperlink layoutX="485.0" layoutY="111.0" onAction="#goToDoneList" style="-fx-font-weight: bold;" text="Orders" />
                         <Hyperlink layoutX="612.0" layoutY="111.0" style="-fx-font-weight: bold;" text="Attendance" />
                         <Button layoutX="-2.0" layoutY="167.0" mnemonicParsing="false" prefHeight="433.0" prefWidth="268.0" text="Hà Nội" textFill="RED">
                             <font>

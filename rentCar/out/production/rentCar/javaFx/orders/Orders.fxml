@@ -41,7 +41,7 @@
                                 <TableColumn fx:id="tcPrice" prefWidth="188.0" text="Total Price" />
                             </columns>
                         </TableView>
-                        <Hyperlink onAction="#backtoHome" layoutX="20.0" layoutY="16.0" text="&lt;&lt;Back" />
+                        <Hyperlink layoutX="20.0" layoutY="16.0" text="&lt;&lt;Back" />
                     </children>
                 </Pane>
             </children></AnchorPane>
