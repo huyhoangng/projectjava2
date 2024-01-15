@@ -2,6 +2,7 @@ package controller.orders;
 
 import database.Connector;
 import entity.Orders;
+import entity.OurCar;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -9,6 +10,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -32,6 +34,8 @@ public class OrdersController implements Initializable {
     public TableColumn<Orders, String> tcNameCar;
     public TableColumn<Orders, Integer> tcDays;
     public TableColumn <Orders, Integer> tcTotalPrice;
+    public TableColumn<Orders, Button> tcEdit;
+    public TableColumn<Orders,Button> tcDelete;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -62,11 +66,6 @@ public class OrdersController implements Initializable {
         Parent root = FXMLLoader.load(getClass().getResource("../../javaFx/HomePage.fxml"));
         Main.rootStage.setScene(new Scene(root,830,600));
     }
-    public void backToListOrder(ActionEvent actionEvent) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("../../javaFx/orders/Orders.fxml"));
-        Main.rootStage.setScene(new Scene(root,830,550));
-    }
-
     public void addOrder(ActionEvent actionEvent) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("../../javaFx/orders/AddOrder.fxml"));
         Main.rootStage.setScene(new Scene(root,830,600));
