@@ -40,41 +40,30 @@ public class Orders {
     public void setFullName(String fullName) {
         FullName = fullName;
     }
-
     public void setDOB(LocalDate DOB) {
         this.DOB = DOB;
     }
-
     public void setAddress(String address) {
         Address = address;
     }
-
-
     public void setDays(Integer days) {
         Days = days;
     }
-
     public void setPrice(Integer price) {
         Price = price;
     }
-
     public String getFullName() {
         return FullName;
     }
-
     public LocalDate getDOB() {
         return DOB;
     }
-
     public String getAddress() {
         return Address;
     }
-
-
     public Integer getDays() {
         return Days;
     }
-
     public Integer getPrice() {
         return Price;
     }

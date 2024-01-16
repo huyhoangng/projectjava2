@@ -26,7 +26,7 @@
                                 <Font size="18.0" />
                             </font>
                         </TextField>
-                        <Button layoutX="579.0" layoutY="43.0" mnemonicParsing="false" onAction="#addOrder" text="+">
+                        <Button layoutX="579.0" layoutY="43.0" mnemonicParsing="false" onAction="#addOrder" style="-fx-background-color: #04AA6D;" textFill="WHITE" text="+">
                             <font>
                                 <Font size="18.0" />
                             </font>
@@ -40,8 +40,8 @@
                                 <TableColumn fx:id="tcNameCar" minWidth="0.0" prefWidth="98.0" text="NameCar" />
                                 <TableColumn fx:id="tcDays" prefWidth="67.0" text="Days" />
                                 <TableColumn fx:id="tcTotalPrice" prefWidth="116.0" text="Total Price" />
-                        <TableColumn fx:id="tcEdit" prefWidth="101.0" text="Action" />
-                        <TableColumn fx:id="tcDelete" prefWidth="77.0" text="Action" />
+                                <TableColumn fx:id="tcEdit" prefWidth="101.0" text="Action" />
+                                <TableColumn fx:id="tcDelete" prefWidth="77.0" text="Action" />
                             </columns>
                         </TableView>
                         <Hyperlink layoutX="20.0" layoutY="16.0" onAction="#backtoHome" text="&lt;&lt;Back" />

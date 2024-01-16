@@ -10,6 +10,8 @@ import javafx.scene.control.Button;
 import javafx.stage.Stage;
 import rootStage.Main;
 
+import java.sql.Date;
+
 
 public class OurCar {
 
@@ -23,6 +25,7 @@ public class OurCar {
         private Integer price;
         private Button btnEdit;
         private Button btnDelete;
+
 
     public Button getBtnDelete() {
         return btnDelete;

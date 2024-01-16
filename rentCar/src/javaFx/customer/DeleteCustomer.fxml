@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="400.0" style="-fx-border-radius: 50%; -fx-background-color: black;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.customer.DeleteCustomerController">
+    <children>
+        <Text fill="WHITE" layoutX="89.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Are you sure delete:">
+            <font>
+                <Font size="26.0" />
+            </font>
+        </Text>
+        <Button fx:id="btnYes" layoutX="72.0" layoutY="111.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="85.0" style="-fx-background-color: #238636;" text="Yes" textFill="WHITE" />
+        <Button fx:id="btnNo" layoutX="250.0" layoutY="111.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="78.0" style="-fx-background-color: #21262D;" text="No" textFill="WHITE" />
+        <Text fx:id="txtN" fill="WHITE" layoutX="197.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" text="?" />
+    </children>
+</Pane>

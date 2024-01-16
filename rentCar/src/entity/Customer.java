@@ -1,4 +1,13 @@
 package entity;
+
+import controller.customer.DeleteCustomerController;
+import controller.customer.EditCustomerController;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.stage.Stage;
+import rootStage.Main;
 import java.time.LocalDate;
 import java.util.Objects;
 public class Customer {
@@ -7,7 +16,23 @@ public class Customer {
         private String fullName;
         private LocalDate dob;
         private String address;
+       private Button btnEdit;
+       private Button btnDelete;
+    public Button getBtnDelete() {
+        return btnDelete;
+    }
 
+    public void setBtnDelete(Button btnDelete) {
+        this.btnDelete = btnDelete;
+    }
+
+    public Button getBtnEdit() {
+        return btnEdit;
+    }
+
+    public void setBtnEdit(Button btnEdit) {
+        this.btnEdit = btnEdit;
+    }
 
     public Integer getId() {
             return id;
@@ -60,6 +85,32 @@ public class Customer {
             this.fullName = fullName;
             this.dob = dob;
             this.address = address;
+
+            this.btnEdit = new Button("Edit");
+//            this.btnEdit.setStyle("-fx-background-color: red");
+            this.btnEdit.setOnAction(event->{
+                try{
+                    EditCustomerController.editOurCustomer = this;
+                    Parent root = FXMLLoader.load(getClass().getResource("../javaFx/customer/EditCustomer.fxml"));
+                    Main.rootStage.setScene(new Scene(root,830,550));
+                }catch (Exception e){
+
+                }
+            });
+
+            this.btnDelete = new Button("Delete");
+            this.btnDelete.setOnAction(event->{
+                try{
+                    DeleteCustomerController.deleteCustomer = this;
+                    Parent root = FXMLLoader.load(getClass().getResource("../javaFx/customer/DeleteCustomer.fxml"));
+                    Stage s = new Stage();
+                    s.setScene(new Scene(root,400,200));
+                    s.setTitle("DELETE");
+                    s.show();
+                }catch (Exception e){
+
+                }
+            });
         }
 
         @Override

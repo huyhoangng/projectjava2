@@ -15,8 +15,6 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import rootStage.Main;
-
-
 import java.net.URL;
 import java.sql.ResultSet;
 import java.util.ResourceBundle;
@@ -30,9 +28,6 @@ public class OurCarController implements Initializable {
         public TableColumn<OurCar,String> tcSeats;
         public TableColumn<OurCar, Integer> tcPrice;
         public TableColumn<OurCar, Integer> tcIDCar;
-
-
-
         public TableColumn<OurCar,Button> tcEdit;
         public TableColumn<OurCar,Button> tcDelete;
 
@@ -60,7 +55,6 @@ public class OurCarController implements Initializable {
                             rs.getInt("Price")
                     ));
                 }
-//
 
             }catch (Exception e){
                 Alert alert = new Alert(Alert.AlertType.ERROR);
@@ -79,7 +73,6 @@ public class OurCarController implements Initializable {
     public void goToEditCar(ActionEvent actionEvent) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("../../javaFx/cars/EditCar.fxml"));
         Main.rootStage.setScene(new Scene(root,830,600));
-
     }
 
     public void addOurCar(ActionEvent actionEvent) throws Exception {
