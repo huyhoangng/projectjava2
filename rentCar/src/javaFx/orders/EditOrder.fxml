@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.orders.EditOrderController">
+    <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0">
+            <children>
+                <Pane prefHeight="600.0" prefWidth="800.0">
+                    <children>
+                        <Text layoutX="336.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="EDIT CAR">
+                            <font>
+                                <Font size="25.0" />
+                            </font>
+                        </Text>
+                        <Hyperlink layoutX="14.0" layoutY="14.0" onAction="#backToListOrder" text="&lt;&lt;Back" />
+                        <Label layoutX="14.0" layoutY="92.0" text="Please Enter Infomation">
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                        </Label>
+                        <Pane layoutX="229.0" layoutY="55.0" prefHeight="530.0" prefWidth="322.0" style="-fx-border-color: Gray; -fx-border-radius: 10px;" />
+                        <Button layoutX="277.0" layoutY="509.0" mnemonicParsing="false" onAction="#submit" prefHeight="39.0" prefWidth="225.0" style="-fx-background-color: #04aa6d; -fx-border-radius: 20px;" text="Submit" textFill="#fffdfd">
+                            <font>
+                                <Font size="18.0" />
+                            </font></Button>
+                        <TextField fx:id="ipNameCar" layoutX="258.0" layoutY="84.0" prefHeight="45.0" prefWidth="259.0" promptText="Name Car" />
+                        <TextArea fx:id="ipFullName" layoutX="257.0" layoutY="417.0" prefHeight="45.0" prefWidth="259.0" promptText="Full Name">
+                            <font>
+                                <Font size="18.0" />
+                            </font></TextArea>
+                        <TextField fx:id="ipDOB" layoutX="256.0" layoutY="147.0" prefHeight="45.0" prefWidth="259.0" promptText="DOB">
+                            <font>
+                                <Font size="18.0" />
+                            </font>
+                        </TextField>
+                        <TextField fx:id="ipAddress" layoutX="256.0" layoutY="212.0" prefHeight="45.0" prefWidth="259.0" promptText="Address">
+                            <font>
+                                <Font size="18.0" />
+                            </font>
+                        </TextField>
+                        <TextField fx:id="ipDays" layoutX="258.0" layoutY="348.0" prefHeight="45.0" prefWidth="259.0" promptText="Days">
+                            <font>
+                                <Font size="18.0" />
+                            </font></TextField>
+                        <TextField fx:id="ipIDCar" layoutX="258.0" layoutY="279.0" prefHeight="45.0" prefWidth="259.0" promptText="IDCar">
+                            <font>
+                                <Font size="18.0" />
+                            </font>
+                        </TextField>
+                        <TextField fx:id="ipTotalPrice" layoutX="258.0" layoutY="279.0" prefHeight="45.0" prefWidth="259.0" promptText="Total Price">
+                            <font>
+                                <Font size="18.0" />
+                            </font>
+                        </TextField>
+
+                    </children>
+                </Pane>
+            </children></AnchorPane>
+    </content>
+</ScrollPane>

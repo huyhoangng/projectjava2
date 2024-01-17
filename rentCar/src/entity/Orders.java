@@ -1,5 +1,16 @@
 package entity;
 
+import controller.customer.DeleteCustomerController;
+import controller.customer.EditCustomerController;
+import controller.orders.DeleteOrderController;
+import controller.orders.EditOrderController;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.stage.Stage;
+import rootStage.Main;
+
 import java.time.LocalDate;
 
 public class Orders {
@@ -9,7 +20,24 @@ public class Orders {
     private Integer IDCar;
     private String NameCar;
     private Integer Days;
-    private Integer Price;
+    private Integer TotalPrice;
+    private Button btnEdit;
+    private Button btnDelete;
+    public Button getBtnDelete() {
+        return btnDelete;
+    }
+
+    public void setBtnDelete(Button btnDelete) {
+        this.btnDelete = btnDelete;
+    }
+
+    public Button getBtnEdit() {
+        return btnEdit;
+    }
+
+    public void setBtnEdit(Button btnEdit) {
+        this.btnEdit = btnEdit;
+    }
 
     public Orders(String fullName, LocalDate DOB, String address,Integer idCar, String nameCar, Integer days, Integer price) {
         FullName = fullName;
@@ -18,7 +46,32 @@ public class Orders {
         IDCar= idCar;
         NameCar = nameCar;
         Days = days;
-        Price = price;
+        TotalPrice = price;
+        this.btnEdit = new Button("Edit");
+//            this.btnEdit.setStyle("-fx-background-color: red");
+        this.btnEdit.setOnAction(event->{
+            try{
+                EditOrderController.editOrder = this;
+                Parent root = FXMLLoader.load(getClass().getResource("../javaFx/orders/EditOrder.fxml"));
+                Main.rootStage.setScene(new Scene(root,830,550));
+            }catch (Exception e){
+
+            }
+        });
+
+        this.btnDelete = new Button("Delete");
+        this.btnDelete.setOnAction(event->{
+            try{
+                DeleteOrderController.deleteOrder = this;
+                Parent root = FXMLLoader.load(getClass().getResource("../javaFx/customer/DeleteOrder.fxml"));
+                Stage s = new Stage();
+                s.setScene(new Scene(root,400,200));
+                s.setTitle("DELETE");
+                s.show();
+            }catch (Exception e){
+
+            }
+        });
     }
 
     public void setNameCar(String nameCar) {
@@ -50,7 +103,7 @@ public class Orders {
         Days = days;
     }
     public void setPrice(Integer price) {
-        Price = price;
+        TotalPrice = price;
     }
     public String getFullName() {
         return FullName;
@@ -64,7 +117,9 @@ public class Orders {
     public Integer getDays() {
         return Days;
     }
-    public Integer getPrice() {
-        return Price;
+    public Integer getTotalPrice() {
+        return TotalPrice;
     }
+
+
 }

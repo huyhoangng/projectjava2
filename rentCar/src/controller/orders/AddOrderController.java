@@ -30,9 +30,9 @@ public class AddOrderController implements Initializable {
 
         public void submit(ActionEvent actionEvent){
             String fullName= ipFullName.getText();
-            String namecar = ipNameCar.getText();
             String dob = String.valueOf(ipDOB.getText());
             String address = ipAddress.getText();
+            String namecar = ipNameCar.getText();
             String idCar = ipIDCar.getText();
             String days = ipDays.getText();
 
@@ -40,13 +40,15 @@ public class AddOrderController implements Initializable {
 
             Connector cn = Connector.getInstance();
             try{
-                PreparedStatement pp = cn.getConn().prepareStatement("INSERT INTO ourcar(nameCar, status, color,seats,position,Price) VALUES (?,?,?,?,?,?);");
+                PreparedStatement pp = cn.getConn().prepareStatement("SELECT ourcar.iDCar, ourcar.nameCar, ourcar.Price*orders.days=totalPrice\n" +
+                        "FROM ourcar\n" +
+                        "INNER JOIN orders ON ourcar.iDCar=orders.iDCar;");
                 pp.setString(1,fullName);
-                pp.setString(2,namecar);
-                pp.setString(3, String.valueOf(dob));
-                pp.setString(4,address);
-                pp.setString(5,idCar);
-                pp.setString(6,days);
+                pp.setString(2, String.valueOf(dob));
+                pp.setString(3,address);
+                pp.setString(4,namecar);
+                pp.setString(5,days);
+                pp.setString(6,idCar);
                 pp.executeUpdate();
                 backToListOrder(null);
             }catch (Exception e) {
