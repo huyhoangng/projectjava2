@@ -26,6 +26,8 @@ public class OurCar {
         private Button btnEdit;
         private Button btnDelete;
 
+        public static OurCar ourCar;
+
 
     public Button getBtnDelete() {
         return btnDelete;

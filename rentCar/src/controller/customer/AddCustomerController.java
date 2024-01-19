@@ -47,7 +47,8 @@ public class AddCustomerController  {
                 e.getMessage();
             }finally {
                 ipFullName.setText("");
-                ipDob.setValue(LocalDate.parse(""));
+//                ipDob.setValue(LocalDate.parse(""));
+                ipDob.setValue(null);
                 ipAddress.setText("");
             }
 

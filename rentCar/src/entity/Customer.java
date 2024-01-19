@@ -18,6 +18,18 @@ public class Customer {
         private String address;
        private Button btnEdit;
        private Button btnDelete;
+       private Button btnOrder= new Button("Order");
+
+       public static Customer customer;
+    public Button getBtnOrder() {
+        return btnOrder;
+    }
+
+
+    public void setBtnOrder(Button btnOrder) {
+        this.btnOrder = btnOrder;
+    }
+
     public Button getBtnDelete() {
         return btnDelete;
     }
@@ -80,6 +92,7 @@ public class Customer {
             return Objects.hash(id, fullName, dob, address);
         }
 
+
         public Customer(Integer id, String fullName, LocalDate dob, String address) {
             this.id = id;
             this.fullName = fullName;
@@ -95,6 +108,20 @@ public class Customer {
                     Main.rootStage.setScene(new Scene(root,830,550));
                 }catch (Exception e){
 
+                }
+            });
+
+            this.btnOrder.setOnAction(event->{
+                try{
+                    Customer.customer = this;
+                    Parent root = FXMLLoader.load(getClass().getResource("../javaFx/orders/AddOrder.fxml"));
+                    Stage s = new Stage();
+                    s.setScene(new Scene(root,830,550));
+                    s.setTitle("Order");
+                    s.show();
+
+                }catch (Exception e){
+                    e.printStackTrace();
                 }
             });
 

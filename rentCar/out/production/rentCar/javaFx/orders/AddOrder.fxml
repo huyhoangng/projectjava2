@@ -13,7 +13,8 @@
                <children>
                   <Pane layoutX="82.0" layoutY="81.0" prefHeight="318.0" prefWidth="667.0" style="-fx-background-color: silver; -fx-border-radius: 15px;">
                      <children>
-                        <TextField layoutX="21.0" layoutY="93.0" prefHeight="39.0" prefWidth="252.0" promptText="Date of Birth" />
+                        <TextField fx:id="ipDOB" layoutX="21.0" layoutY="93.0" prefHeight="39.0" prefWidth="252.0" promptText="Date of Birth" />
+                        <ComboBox fx:id="ipNameCar" layoutX="393.0" layoutY="97.0" prefHeight="31.0" prefWidth="241.0" />
                      </children></Pane>
                   <Text layoutX="357.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add Order">
                      <font>
@@ -40,12 +41,7 @@
                         <Font size="18.0" />
                      </font>
                   </TextField>
-                  <TextField fx:id="ipNameCar" layoutX="474.0" layoutY="174.0" prefWidth="252.0" promptText="Name Car" style="-fx-border-radius: 10px;">
-                     <font>
-                        <Font size="18.0" />
-                     </font>
-                  </TextField>
-                  <Button layoutX="346.0" layoutY="453.0" mnemonicParsing="false" onAction="#submit" prefHeight="39.0" prefWidth="140.0" style="-fx-background-color: #04aa6d; -fx-border-radius: 15px;" text="Submit" textFill="WHITE">
+                  <Button layoutX="346.0" layoutY="453.0" mnemonicParsing="false" onAction="#submit" prefHeight="39.0" prefWidth="140.0" style="-fx-background-color: #04aa6d; -fx-border-radius: 15px;" text="Payment" textFill="WHITE">
                      <font>
                         <Font size="18.0" />
                      </font>

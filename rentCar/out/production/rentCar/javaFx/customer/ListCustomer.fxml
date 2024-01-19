@@ -22,14 +22,15 @@
                                 <TableColumn fx:id="tcID" prefWidth="46.0" text="ID" />
                                 <TableColumn fx:id="tcName" prefWidth="214.0" text="Full Name " />
                                 <TableColumn fx:id="tcDOB" prefWidth="155.0" text="DOB" />
-                                <TableColumn fx:id="tcAddress" prefWidth="243.0" text="Address" />
-                                <TableColumn fx:id="tcEdit" prefWidth="88.0" text="Action" />
-                                <TableColumn fx:id="tcDelete" prefWidth="83.0" text="Action" />
+                                <TableColumn fx:id="tcAddress" prefWidth="186.0" text="Address" />
+                                <TableColumn fx:id="tcEdit" prefWidth="55.0" text="Action" />
+                                <TableColumn fx:id="tcDelete" prefWidth="82.0" text="Action" />
+                        <TableColumn fx:id="tcOrder" minWidth="5.0" prefWidth="90.0" text="Action" />
                             </columns>
                         </TableView>
                         <Button layoutX="472.0" layoutY="72.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="67.0" text="Search" />
                         <TextField layoutX="255.0" layoutY="72.0" prefHeight="40.0" prefWidth="223.0" promptText="Search" />
-                        <Button layoutX="559.0" layoutY="72.0" mnemonicParsing="false" onAction="#gotoAddCustomer" prefHeight="41.0" prefWidth="41.0" text="+" style="-fx-background-color: #04AA6D;" textFill="WHITE" />
+                        <Button layoutX="559.0" layoutY="72.0" mnemonicParsing="false" onAction="#gotoAddCustomer" prefHeight="41.0" prefWidth="41.0" style="-fx-background-color: #04AA6D;" text="+" textFill="WHITE" />
                     </children>
                 </Pane>
             </children></AnchorPane>

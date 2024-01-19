@@ -55,7 +55,7 @@ public class Orders {
                 Parent root = FXMLLoader.load(getClass().getResource("../javaFx/orders/EditOrder.fxml"));
                 Main.rootStage.setScene(new Scene(root,830,550));
             }catch (Exception e){
-
+                e.printStackTrace();
             }
         });
 
@@ -69,6 +69,7 @@ public class Orders {
                 s.setTitle("DELETE");
                 s.show();
             }catch (Exception e){
+                e.printStackTrace();
 
             }
         });

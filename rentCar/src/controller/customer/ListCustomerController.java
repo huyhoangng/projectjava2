@@ -33,6 +33,7 @@ public class ListCustomerController implements Initializable {
         public TableColumn<Customer, String> tcAddress;
         public TableColumn<Customer, Button> tcEdit;
         public TableColumn<Customer, Button> tcDelete;
+    public TableColumn<Customer,Button> tcOrder;
 
 
 //    private List<Customer> FetchCustomerFromDatabase() throws SQLException, ClassNotFoundException {
@@ -64,6 +65,7 @@ public class ListCustomerController implements Initializable {
             tcAddress.setCellValueFactory(new PropertyValueFactory<Customer, String>("address"));
             tcEdit.setCellValueFactory(new PropertyValueFactory<Customer,Button>("btnEdit"));
             tcDelete.setCellValueFactory(new PropertyValueFactory<Customer,Button>("btnDelete"));
+            tcOrder.setCellValueFactory(new PropertyValueFactory<Customer,Button>("btnOrder"));
 
             ObservableList<Customer> ls = FXCollections.observableArrayList();
             try {
